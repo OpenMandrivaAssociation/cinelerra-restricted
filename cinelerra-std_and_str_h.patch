@@ -1,0 +1,41 @@
+--- cinelerra/vdevicebuz.C
++++ cinelerra/vdevicebuz.C
+@@ -49,6 +49,8 @@
+ #include <sys/ioctl.h>
+ #include <sys/mman.h>
+ #include <unistd.h>
++#include <string.h>
++#include <strings.h>
+ 
+ #define BASE_VIDIOCPRIVATE	192	
+ 
+
+  
+--- quicktime/graphics.c
++++ quicktime/graphics.c
+@@ -1,5 +1,6 @@
+ #include "graphics.h"
+ 
++#include <stdlib.h>
+ #include <string.h>
+ 
+ /* Graphics acceleration routines */
+--- quicktime/libmjpeg.c
++++ quicktime/libmjpeg.c
+@@ -17,6 +17,7 @@
+  
+ #include <stdio.h>
+ #include <stdlib.h>
++#include <string.h>
+ #include "colormodels.h"
+ #include "libmjpeg.h"
+ 
+--- quicktime/qtpng.c
++++ quicktime/qtpng.c
+@@ -1,6 +1,7 @@
+ #include "colormodels.h"
+ #include "funcprotos.h"
+ #include <png.h>
++#include <string.h>
+ #include "quicktime.h"
+ #include "qtpng.h"
