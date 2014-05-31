@@ -21,6 +21,7 @@ Source0:	Cinelerra2.2.0.tar.gz
 Source1:	cinelerra.rpmlintrc
 # from /guicat , must compile partially first
 Source2:	pngtoh
+Source3:	pngtoh586
 
 Patch0:		cinelerra-std_and_str_h.patch
 Patch100:	cinelerra-2.1.5-alt-fix_locale.patch
@@ -76,7 +77,8 @@ Requires:	lib%{name} = %{version}-%{release}
 
 Conflicts:	libmpeg3-progs
 
-%if %{mdvver} == 201210
+# looks like this ugly heritage is going on...Sflo
+%if %{mdvver} == 201410
 Epoch:	1
 %endif
 
@@ -122,7 +124,11 @@ This package contains the library needed by %{name}.
 
 # autoconf will drop it from config.sub. Sflo
 # libtool crappy hack
+%ifarch x86_64
 cp -r %{SOURCE2} pngtoh
+%else
+cp -r %{SOURCE3} pngtoh
+%endif
 chmod +x pngtoh
 find plugins -name "*.png"  -exec ./pngtoh {} \;
 
