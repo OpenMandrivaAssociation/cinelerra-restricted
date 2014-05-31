@@ -123,6 +123,7 @@ This package contains the library needed by %{name}.
 # autoconf will drop it from config.sub. Sflo
 # libtool crappy hack
 cp -r %{SOURCE2} pngtoh
+chmod +x pngtoh
 find plugins -name "*.png"  -exec ./pngtoh {} \;
 
 
