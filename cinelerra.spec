@@ -11,7 +11,7 @@
 
 Name:		cinelerra
 Version:	%gitrel.0
-Release:	1.git%{snap}.2
+Release:	1.git%{snap}.3
 Summary:	Non-Linear Video Editing Suite
 License:	GPL
 Group:		Video
