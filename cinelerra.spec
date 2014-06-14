@@ -31,7 +31,8 @@ Requires:	ffmpeg
 BuildRequires:	libtool
 BuildRequires:	pkgconfig(x11)
 BuildRequires:	a52dec-devel
-BuildRequires:	pkgconfig(esound)
+BuildRequires:	esound-devel
+#BuildRequires:	pkgconfig(esound)
 # some headers needed even if not compiled with external ffmpeg
 # do not build with 'external ffmpeg' in configure
 # latest gits use hevy modified ffmpeg headers
