@@ -11,7 +11,7 @@
 
 Name:		cinelerra
 Version:	%gitrel.0
-Release:	1.git%{snap}.3
+Release:	2.git%{snap}.3
 Summary:	Non-Linear Video Editing Suite
 License:	GPL
 Group:		Video
@@ -72,7 +72,7 @@ BuildRequires:	libmp4v2-devel
 BuildRequires:	pkgconfig(uuid)
 BuildRequires:	desktop-file-utils
 
-# is plf, no EVRD macro here
+# is plf, no EVRD macro here .Sflo
 Requires:	lib%{name} = %{version}-%{release}
 
 Conflicts:	libmpeg3-progs
