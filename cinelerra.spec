@@ -11,11 +11,11 @@
 
 Name:		cinelerra
 Version:	%gitrel.0
-Release:	1.git%{snap}.2
+Release:	1.git%{snap}.3
 Summary:	Non-Linear Video Editing Suite
 License:	GPL
 Group:		Video
-URL:		http://cinelerra.org/
+URL:		http://cinelerra-cv.org
 # git://git.cinelerra-cv.org/CinelerraCV.git#branch=master
 Source0:	Cinelerra2.2.0.tar.gz
 Source1:	cinelerra.rpmlintrc
