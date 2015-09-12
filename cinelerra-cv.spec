@@ -42,8 +42,8 @@ BuildRequires:	yasm
 BuildRequires:	a52dec-devel
 BuildRequires:	jpeg-devel
 BuildRequires:	lame-devel
-BuildRequires:	libfaac-devel
-BuildRequires:	libfaad2-devel
+BuildRequires:	faac-devel
+BuildRequires:	faad2-devel
 BuildRequires:	libmp4v2-devel
 BuildRequires:	xvid-devel
 BuildRequires:	pkgconfig(alsa)
