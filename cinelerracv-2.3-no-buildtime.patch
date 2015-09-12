@@ -1,0 +1,44 @@
+diff -U 3 -H -d -r -N -- CinelerraCV-2.2git.20150706.orig/cinelerra/main.C CinelerraCV-2.2git.20150706/cinelerra/main.C
+--- CinelerraCV-2.2git.20150706.orig/cinelerra/main.C	2015-07-24 16:20:31.000000000 +0300
++++ CinelerraCV-2.2git.20150706/cinelerra/main.C	2015-07-25 02:16:36.265043374 +0300
+@@ -215,9 +215,6 @@
+ 		COPYRIGHTTEXT2 "\n"
+ #endif
+ 		FFMPEG_EXTERNALTEXT "\n"
+-#if defined(COMPILEDATE)
+-		COMPILEDATE "\n"
+-#endif
+ 		"\n"
+ 
+ PROGRAM_NAME " is free software, covered by the GNU General Public License,\n"
+diff -U 3 -H -d -r -N -- CinelerraCV-2.2git.20150706.orig/plugins/greycstoration/CImg.h CinelerraCV-2.2git.20150706/plugins/greycstoration/CImg.h
+--- CinelerraCV-2.2git.20150706.orig/plugins/greycstoration/CImg.h	2015-07-24 16:20:31.000000000 +0300
++++ CinelerraCV-2.2git.20150706/plugins/greycstoration/CImg.h	2015-07-25 05:01:22.694183182 +0300
+@@ -5083,7 +5083,6 @@
+         if (usage) {
+           std::fprintf(stderr,"\n %s%s%s",cimg::t_red,cimg::basename(argv[0]),cimg::t_normal);
+           std::fprintf(stderr," : %s",usage);
+-          std::fprintf(stderr," (%s, %s)\n\n",__DATE__,__TIME__);
+         }
+         if (defaut) std::fprintf(stderr,"%s\n",defaut);
+       }
+@@ -5360,7 +5359,7 @@
+     inline void info() {
+       char tmp[1024] = { 0 };
+       std::fprintf(stderr,"\n %sCImg Library %d.%d.%d%s, compiled %s ( %s ) with the following flags :\n\n",
+-                   cimg::t_red,cimg_version/100,(cimg_version%100)/10,cimg_version%10,cimg::t_normal,__DATE__,__TIME__);
++                   cimg::t_red,cimg_version/100,(cimg_version%100)/10,cimg_version%10,cimg::t_normal);
+ 
+       std::fprintf(stderr,"  > CPU endianness :         %s%s Endian%s\n",
+                    cimg::t_bold,
+diff -U 3 -H -d -r -N -- CinelerraCV-2.2git.20150706.orig/quicktime/ffmpeg/cmdutils.c CinelerraCV-2.2git.20150706/quicktime/ffmpeg/cmdutils.c
+--- CinelerraCV-2.2git.20150706.orig/quicktime/ffmpeg/cmdutils.c	2015-07-24 16:20:31.000000000 +0300
++++ CinelerraCV-2.2git.20150706/quicktime/ffmpeg/cmdutils.c	2015-07-25 02:17:37.754170616 +0300
+@@ -208,7 +208,6 @@
+ #if ENABLE_AVFILTER
+     fprintf(stderr, "  libavfilter version: " AV_STRINGIFY(LIBAVFILTER_VERSION) "\n");
+ #endif
+-    fprintf(stderr, "  built on " __DATE__ " " __TIME__);
+ #ifdef __GNUC__
+     fprintf(stderr, ", gcc: " __VERSION__ "\n");
+ #else

@@ -1,6 +1,0 @@
-# libfaad2-devel, libmp4v2-devel
-addFilter("E: invalid-build-requires")
-# useless w
-addFilter("W: mixed-use-of-spaces-and-tabs")
-addFilter("W: shared-lib-calls-exit")
-addFilter("W: filename-too-long-for-joliet")
