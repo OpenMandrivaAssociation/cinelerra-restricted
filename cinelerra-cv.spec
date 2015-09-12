@@ -86,10 +86,12 @@ BuildRequires:	pkgconfig(xft)
 #BuildRequires:	appstream-util
 BuildRequires:	gcc-c++, gcc, gcc-cpp
 
+
 Requires:	%{libguicast} = %{EVRD}
 Requires:	%{libmpeg3hv} = %{EVRD}
 Requires:	%{libquicktimehv} = %{EVRD}
 Requires:	mjpegtools >= 1.6.3
+
 
 Obsoletes:      cinelerra < %{EVRD}
 Provides:	cinelerra = %{EVRD}
