@@ -84,7 +84,7 @@ BuildRequires:	docbook2x
 BuildRequires:	pkgconfig(xxf86vm)
 BuildRequires:	pkgconfig(xft)
 #BuildRequires:	appstream-util
-
+BuildRequires:	gcc-c++, gcc, gcc-cpp
 
 Requires:	%{libguicast} = %{EVRD}
 Requires:	%{libmpeg3hv} = %{EVRD}
@@ -220,6 +220,9 @@ Quicktime 4 Linux Cinelerra internal library.
 
 
 %build
+export CC=gcc
+export CXX=g++
+
 ./autogen.sh
 export CXXFLAGS="%{optflags} $(pkg-config --cflags freetype2) -D__STDC_CONSTANT_MACROS"
 export CFLAGS="%{optflags} -fPIC"
