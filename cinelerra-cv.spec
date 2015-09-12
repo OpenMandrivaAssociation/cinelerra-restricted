@@ -80,7 +80,6 @@ BuildRequires:	pkgconfig(dirac)
 BuildRequires:	pkgconfig(schroedinger-1.0)
 BuildRequires:	libnut-devel
 BuildRequires:	gsm-devel
-BuildRequires:	liba52dec-devel
 BuildRequires:	docbook2x
 BuildRequires:	pkgconfig(xxf86vm)
 BuildRequires:	pkgconfig(xft)
