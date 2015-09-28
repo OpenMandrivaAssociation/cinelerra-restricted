@@ -1,6 +1,8 @@
 %define debug_package	%{nil}
 %define _disable_ld_no_undefined 1
 %define _disable_ld_as_needed 1
+%define _disable_lto 1
+%define _disable_rebuild_configure 1
 %define Werror_cflags -Wformat
 # TODO: ask for appdata.xml upstream -DONE on ven 11 set 2015, 20.17.47, CEST Symbianflo
 %define _appdatadir %{_datadir}/appdata
@@ -93,7 +95,7 @@ Requires:	%{libquicktimehv} = %{EVRD}
 Requires:	mjpegtools >= 1.6.3
 
 
-Obsoletes:      cinelerra < %{EVRD}
+Obsoletes:	cinelerra < %{EVRD}
 Provides:	cinelerra = %{EVRD}
 
 %description
@@ -225,7 +227,8 @@ Quicktime 4 Linux Cinelerra internal library.
 ./autogen.sh
 export CXXFLAGS="%{optflags} $(pkg-config --cflags freetype2) -D__STDC_CONSTANT_MACROS"
 export CFLAGS="%{optflags} -fPIC"
-%configure2_5x \
+
+%configure \
 	--enable-freetype2 \
 	--disable-rpath \
 	--enable-alsa \
