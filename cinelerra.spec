@@ -3,21 +3,15 @@
 %define Werror_cflags -Wformat
 
 %define distsuffix plf
-%define gitrel 2.2.0
-%define snap  2014.05.31
-
-
-
 
 Name:		cinelerra
-Version:	%gitrel.0
+Version:	2.3
 Release:	1.git%{snap}.3
 Summary:	Non-Linear Video Editing Suite
 License:	GPL
 Group:		Video
 URL:		http://cinelerra-cv.org
-# git://git.cinelerra-cv.org/CinelerraCV.git#branch=master
-Source0:	Cinelerra2.2.0.tar.gz
+Source0:	https://cinelerra-cv.org/releases/CinelerraCV-2.3.tar.xz
 Source1:	cinelerra.rpmlintrc
 # from /guicat , must compile partially first
 Source2:	pngtoh
@@ -76,11 +70,6 @@ Requires:	lib%{name} = %{version}-%{release}
 
 Conflicts:	libmpeg3-progs
 
-%if %{mdvver} == 201210
-Epoch:	1
-%endif
-
-
 %description
 If you want to make movies, you want the compositing
 and editing that the big boys use, you want the efficiency
@@ -114,7 +103,7 @@ This package contains the library needed by %{name}.
 ###########################
 
 %prep
-%setup -q -n CinelerraCV
+%setup -q -n CinelerraCV-2.3
 %patch0 -p0
 
 # keep this for rosa
