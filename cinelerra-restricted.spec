@@ -39,8 +39,8 @@ BuildRequires:	pkgconfig(freetype2)
 BuildRequires:	pkgconfig(libavc1394)
 BuildRequires:	pkgconfig(libdv)
 BuildRequires:	pkgconfig(ext2fs)
-BuildRequires:	libfaac-devel
-BuildRequires:	libfaad2-devel
+BuildRequires:	faac-devel
+BuildRequires:	faad2-devel
 BuildRequires:	pkgconfig(fftw3)
 BuildRequires:	pkgconfig(libiec61883)
 BuildRequires:	pkgconfig(gl)
