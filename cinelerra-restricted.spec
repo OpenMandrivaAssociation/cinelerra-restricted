@@ -36,6 +36,7 @@ BuildRequires:	lame-devel
 BuildRequires:	pkgconfig(alsa)
 BuildRequires:	pkgconfig(audiofile)
 BuildRequires:	pkgconfig(freetype2)
+BuildRequires:  pkgconfig(fontconfig)
 BuildRequires:	pkgconfig(libavc1394)
 BuildRequires:	pkgconfig(libdv)
 BuildRequires:	pkgconfig(ext2fs)
