@@ -17,7 +17,7 @@ Source1:	cinelerra.rpmlintrc
 Source2:	pngtoh
 
 Patch0:		cinelerra-std_and_str_h.patch
-Patch100:	cinelerra-2.1.5-alt-fix_locale.patch
+#Patch100:	cinelerra-2.1.5-alt-fix_locale.patch
 
 Requires:	mjpegtools >= 1.6.3
 Requires:	ffmpeg
@@ -107,7 +107,7 @@ This package contains the library needed by %{name}.
 %patch0 -p0
 
 # keep this for rosa
-%patch100 -p1
+#patch100 -p1
 
 # autoconf will drop it from config.sub. Sflo
 # libtool crappy hack
