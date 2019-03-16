@@ -66,6 +66,7 @@ BuildRequires:	pkgconfig(IlmBase)
 BuildRequires:	libmp4v2-devel
 BuildRequires:	pkgconfig(uuid)
 BuildRequires:	desktop-file-utils
+BuildRequires:  pkgconfig(xv)
 
 # is plf, no EVRD macro here
 Requires:	lib%{name} = %{version}-%{release}
