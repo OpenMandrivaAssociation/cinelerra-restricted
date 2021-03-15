@@ -2,31 +2,25 @@
 %define _disable_ld_as_needed 1
 %define Werror_cflags -Wformat
 
+%define date 20201031
+%define cin cinelerra
+
 %define distsuffix plf
-%define gitrel 2.2.0
-%define snap  2014.05.31
-
-
-
 
 Name:		cinelerra
-Version:	%gitrel.0
-Release:	1.git%{snap}.3
+Version:	5.1.%{date}
+Release:	1
 Summary:	Non-Linear Video Editing Suite
 License:	GPL
 Group:		Video
-URL:		http://cinelerra-cv.org
+URL:		https://www.cinelerra-gg.org
 # git://git.cinelerra-cv.org/CinelerraCV.git#branch=master
-Source0:	Cinelerra2.2.0.tar.gz
+Source0:	https://www.cinelerra-gg.org/download/pkgs/src/cin_%{version}-src.tgz
 Source1:	cinelerra.rpmlintrc
+
 # from /guicat , must compile partially first
-Source2:	pngtoh
+#Source2:	pngtoh
 
-Patch0:		cinelerra-std_and_str_h.patch
-Patch100:	cinelerra-2.1.5-alt-fix_locale.patch
-
-Requires:	mjpegtools >= 1.6.3
-Requires:	ffmpeg
 BuildRequires:	libtool
 BuildRequires:	pkgconfig(x11)
 BuildRequires:	a52dec-devel
@@ -71,15 +65,13 @@ BuildRequires:	libmp4v2-devel
 BuildRequires:	pkgconfig(uuid)
 BuildRequires:	desktop-file-utils
 
+Requires:	mjpegtools >= 1.6.3
+Requires:	ffmpeg
+
 # is plf, no EVRD macro here
 Requires:	lib%{name} = %{version}-%{release}
 
 Conflicts:	libmpeg3-progs
-
-%if %{mdvver} == 201210
-Epoch:	1
-%endif
-
 
 %description
 If you want to make movies, you want the compositing
@@ -114,16 +106,12 @@ This package contains the library needed by %{name}.
 ###########################
 
 %prep
-%setup -q -n CinelerraCV
-%patch0 -p0
-
-# keep this for rosa
-%patch100 -p1
+%setup -q -n %{name}-5.1
 
 # autoconf will drop it from config.sub. Sflo
 # libtool crappy hack
-cp -r %{SOURCE2} pngtoh
-find plugins -name "*.png"  -exec ./pngtoh {} \;
+#cp -r %{SOURCE2} pngtoh
+#find plugins -name "*.png"  -exec ./pngtoh {} \;
 
 
 %build
