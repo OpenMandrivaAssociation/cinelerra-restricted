@@ -119,6 +119,9 @@ This package contains the library needed by %{name}.
 
 
 %build
+export CC=gcc
+export CXX=g++
+
 export CFLAGS+="%{optflags} -Wwrite-strings -D__STDC_CONSTANT_MACROS"
 export CPPFLAGS="$CFLAGS"
 export LDFLAGS+="$LDFLAGS -Wl,-z,noexecstack"
@@ -130,7 +133,6 @@ sh autogen.sh
     --with-plugindir=%{_libdir}/%{name} \
     --with-buildinfo=git/recompile \
     --enable-opengl \
-    --with-clang \
     --disable-esd 
 
 %make
