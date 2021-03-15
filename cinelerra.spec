@@ -52,6 +52,7 @@ BuildRequires:	pkgconfig(ogg)
 BuildRequires:	pkgconfig(libraw1394)
 BuildRequires:	pkgconfig(sndfile)
 BuildRequires:	pkgconfig(theora)
+BuildRequires:  pkgconfig(vdpau)
 BuildRequires:	pkgconfig(vorbis)
 BuildRequires:	nasm
 BuildRequires:	yasm
