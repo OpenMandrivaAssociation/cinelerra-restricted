@@ -40,7 +40,7 @@ BuildRequires:	pkgconfig(libavc1394)
 BuildRequires:	pkgconfig(libdv)
 BuildRequires:	pkgconfig(ext2fs)
 BuildRequires:	libfaac-devel
-BuildRequires:	libfaad2-devel
+#BuildRequires:	libfaad2-devel
 BuildRequires:	pkgconfig(fftw3)
 BuildRequires:	pkgconfig(libiec61883)
 BuildRequires:	pkgconfig(gl)
@@ -61,7 +61,7 @@ BuildRequires:	pkgconfig(libtiff-4)
 BuildRequires:	pkgconfig(x264)
 BuildRequires:	xvid-devel
 BuildRequires:	pkgconfig(IlmBase)
-BuildRequires:	libmp4v2-devel
+#BuildRequires:	libmp4v2-devel
 BuildRequires:	pkgconfig(uuid)
 BuildRequires:	desktop-file-utils
 
