@@ -130,6 +130,7 @@ sh autogen.sh
     --with-plugindir=%{_libdir}/%{name} \
     --with-buildinfo=git/recompile \
     --enable-opengl \
+    --with-clang \
     --disable-esd 
 
 %make
