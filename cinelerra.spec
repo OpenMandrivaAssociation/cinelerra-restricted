@@ -62,7 +62,7 @@ BuildRequires:	pkgconfig(OpenEXR)
 BuildRequires:	pkgconfig(libpng)
 BuildRequires:	texinfo
 BuildRequires:	pkgconfig(libtiff-4)
-BuildRequires:	pkgconfig(x264)
+#BuildRequires:	pkgconfig(x264)
 BuildRequires:	xvid-devel
 BuildRequires:	pkgconfig(IlmBase)
 #BuildRequires:	libmp4v2-devel
