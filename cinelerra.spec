@@ -38,6 +38,7 @@ BuildRequires:	pkgconfig(audiofile)
 BuildRequires:	pkgconfig(freetype2)
 BuildRequires:	pkgconfig(libavc1394)
 BuildRequires:	pkgconfig(libdv)
+BuildRequires:  pkgconfig(libusb-1.0)
 BuildRequires:	pkgconfig(ext2fs)
 BuildRequires:	libfaac-devel
 #BuildRequires:	libfaad2-devel
