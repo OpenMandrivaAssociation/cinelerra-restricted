@@ -122,9 +122,9 @@ This package contains the library needed by %{name}.
 export CC=gcc
 export CXX=g++
 
-export CFLAGS+="%{optflags} -Wwrite-strings -D__STDC_CONSTANT_MACROS"
-export CPPFLAGS="$CFLAGS"
-export LDFLAGS+="$LDFLAGS -Wl,-z,noexecstack"
+#export CFLAGS+="%{optflags} -Wwrite-strings -D__STDC_CONSTANT_MACROS"
+#export CPPFLAGS="$CFLAGS"
+#export LDFLAGS+="$LDFLAGS -Wl,-z,noexecstack"
 
 
 sh autogen.sh
@@ -135,10 +135,10 @@ sh autogen.sh
     --enable-opengl \
     --disable-esd 
 
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 rm -rf %{buildroot}/%{_includedir}
 rm -rf  %{buildroot}/%{_libdir}/pkgconfig %{buildroot}/%{_libdir}/{*.so,*.la,*.a}
