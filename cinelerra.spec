@@ -1,5 +1,6 @@
 %define _disable_ld_no_undefined 1
 %define _disable_ld_as_needed 1
+%define _disable_lto 1
 %define Werror_cflags -Wformat
 
 %define date 20201031
