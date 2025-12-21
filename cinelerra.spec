@@ -27,6 +27,11 @@ Patch100:	cinelerra-2.1.5-alt-fix_locale.patch
 
 Requires:	mjpegtools >= 1.6.3
 Requires:	ffmpeg
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	libtool
 BuildRequires:	pkgconfig(x11)
 BuildRequires:	a52dec-devel
